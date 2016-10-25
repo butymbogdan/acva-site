@@ -104,10 +104,22 @@ body {
 .avatar img {
     width: 100%;
 }
+.breadcrumb-sect {
+    border-top: dashed 1px #009688;
+    border-bottom: dashed 1px #009688;
+}
 .breadcrumb-sect ul {
     background: transparent;
     margin-bottom: 0;
     padding-left: 0;
+}
+.breadcrumb>.active {
+    color: #000;
+}
+.breadcrumb>li+li:before {
+    padding: 0 5px;
+    color: #000;
+    content: "/\00a0";
 }
 .page-header {
     margin-bottom: 0;
@@ -203,12 +215,30 @@ body {
     font-weight: bold;
 }
 .info-list .description span {
-    color: #496c1d;
+    color: #009688;
 }
 .info-list .description p {
     font-size: 12px;
     margin-top: 5px;
     text-indent: 5px;
+}
+.article-preview {
+    margin: 6px 20px 0 0;
+    border: dashed 1px #009688;
+    padding: 10px;
+    border-radius: 10px;
+}
+.article-preview img {
+    border-radius: 10px;
+    width: 320px;
+}
+.article-name h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.comments .media {
+    border-top: solid 1px #009688;
+    padding-top: 10px;
 }
 .pagination {
     display: table;
@@ -252,17 +282,20 @@ body {
 .nav>li>a:focus, .nav>li>a:hover {
     background-color: transparent;
 }
-.site-info {
+.site-description {
     background: #ccc;
     padding-bottom: 45px;
     margin-bottom: -40px;
 }
-.site-info::before {
+.site-description::before {
     content: "";
     background: url('../img/bg_line.png') 50% -40px no-repeat;
     height: 40px;
     width: 100%;
     display: block;
+}
+.site-description h4 {
+    font-size: 16px;
 }
 .footer {
     background-color: #1B1B1B;
