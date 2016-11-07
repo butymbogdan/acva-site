@@ -82,6 +82,9 @@ body {
     background-color: transparent;
     color: #009688;
 }
+.dropdown-menu>li>a {
+    font-weight: bold;
+}
 .dropdown-menu>li>a:hover {
     text-decoration: underline;
 }
@@ -186,8 +189,8 @@ body {
     height: 200px;
 }
 .element-wrap .more a{
-    background: rgb(186, 63, 65);
-    box-shadow: rgb(186, 63, 65) 0 0 0 2px;
+    background: #009688;
+    box-shadow: #009688 0 0 0 2px;
     display: block;
     width: 100%;
     height: 40px;
@@ -222,6 +225,51 @@ body {
     margin-top: 5px;
     text-indent: 5px;
 }
+.site-cat a {
+    width: 100%;
+    position: relative;
+    display: block;
+    transition: all .5s;
+}
+.site-cat a:hover {
+    box-shadow: 0 0 20px 2px #000;
+}
+.site-cat a img {
+    width: 100%;
+    height: 155px;
+}
+.site-cat a span {
+    position: absolute;
+    background: #009688;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+    color: #fff;
+}
+.last-news a {
+    display: block;
+    position: relative;
+}
+.last-news a img {
+    width: 100%;
+}
+.last-news a span {
+    background: rgba(0,0,0,.7);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #009688;
+    transition: all 1s;
+    padding: 0 5px;
+}
+.last-news a:hover span {
+    background: rgba(0,0,0,1);
+}
 .article-preview {
     margin: 6px 20px 0 0;
     border: dashed 1px #009688;
@@ -236,9 +284,27 @@ body {
     margin-top: 0;
     margin-bottom: 10px;
 }
+.article-info {
+    background-color: #ccc;
+    overflow: hidden;
+    padding: 10px 0;
+}
+.article-info li {
+    float: left;
+    margin-left: 10px;
+    border-right: solid 1px;
+    padding-right: 10px;
+}
+.article-info li:last-child {
+    border: none;
+}
+.comments h3 {
+    background: #ccc;
+    padding: 10px;
+}
 .comments .media {
-    border-top: solid 1px #009688;
-    padding-top: 10px;
+    margin-left: 20px;
+    padding: 10px 0;
 }
 .pagination {
     display: table;
@@ -246,14 +312,20 @@ body {
     margin: 35px auto 25px auto;
     border-radius: 4px;
 }
-.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span,
+.pagination>.active>span:focus, .pagination>.active>span:hover {
     z-index: 3;
     color: #fff;
     cursor: default;
     background-color: #BA3F41;
     border-color: #BA3F41;
 }
+.pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover {
+    background-color: #ccc;
+    border-color: #ccc;
+}
 .pagination>li>a, .pagination>li>span {
+    border: solid 1px #ccc;
     color: #009688;
 }
 .article-img {
